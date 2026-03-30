@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/herb01?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: hao1230..
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: ""
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名的自动转换

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.herb.mapper.PrescriptionMapper">
+    <!--    动态sql-->
+    <select id="list" resultType="org.herb.pojo.Prescription">
+        select * from prescription
+        <where>
+
+            <if test="dosageForm != null">
+                dosage_form like concat('%',#{dosageForm},'%')
+            </if>
+
+            <if test="preName != null">
+                and pre_name like concat('%',#{preName},'%')
+            </if>
+
+        </where>
+
+    </select>
+
+<!--    <insert id="collect">-->
+<!--        insert into pre_collection(pre_id,user_id) values(#{preId},#{userId})-->
+<!--    </insert>-->
+
+<!--    <update id="collect">-->
+<!--        update prescription set coll_num=coll_num+1 where pre_id=#{preId}-->
+<!--    </update>-->
+
+</mapper>

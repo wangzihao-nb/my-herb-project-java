@@ -1,0 +1,48 @@
+package org.herb.utils.zhipu.oapi;
+
+import okhttp3.MediaType;
+
+public class Constants {
+
+    public static final String ModelChatGLM4 = "GLM-4";
+
+    public static final String ModelChatGLM4Flash = "glm-4-flash";
+
+    public static final String ModelCogView = "cogview";
+
+    public static final String ModelCogView3Flash = "cogview-3-flash";
+
+    public static final String ModelCogVideoXFlash = "cogvideox-flash";
+
+    public static final String ModelChatGLM4V = "glm-4v";
+
+    public static final String ModelChatGLM4VFlash = "glm-4v-flash";
+
+    public static final String ModelEmbedding2 = "embedding-2";
+
+    public static final String ModelChatGLM3TURBO = "glm-3-turbo";
+
+    // invoke methods
+    public static final String invokeMethodAsync = "async-invoke";
+    public static final String invokeMethodSse = "sse-invoke";
+
+    public static final String invokeMethod = "invoke";
+
+    // http keywords
+    public static final String authHeaderKey = "Authorization";
+    public static final String CONTENT_TYPE = "Content-Type";
+    public static final String ACCEPT = "Accept";
+    public static final String SSE_CONTENT_TYPE = "text/event-stream";
+    public static final String USER_AGENT = "User-Agent";
+    public static final String DEFAULT_USER_AGENT = "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)";
+    public static final String APPLICATION_JSON = "application/json";
+    public static final String JSON_CONTENT_TYPE = APPLICATION_JSON + "; charset=utf-8";
+    public static final MediaType jsonMediaType = MediaType.get(JSON_CONTENT_TYPE);
+    public static final String resultKeyStatusCode = "code";
+    public static final String resultKeyMsg = "msg";
+    public static final String resultKeyError = "error";
+    public static final String resultKeySuccess = "success";
+    public static final String resultKeyData = "data";
+
+
+}
